@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gashapon Machine Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game-container">
+  <div class="machine">
+    <img src='file:///C:/Users/Admin/Downloads/FreeSample-Vectorizer-io-gashpon_machiner-removebg-preview.svg' alt="Rotating Image" class="gashapon-image">
+  </div>
+
+  <div class="controls">
+    <h1 style="color: #ffcc00;">Gashapon Game</h1>
+    <div class="balance-display">Balance: $<span id="balance"></span></div>
+
+    <div>
+      <label style="color: #cc0000;">Red Balls:</label>
+      <input type="number" id="redCount" min="1" max="13" value="5">
+    </div>
+    <div>
+      <label style="color: #3366cc;">Blue Balls:</label>
+      <input type="number" id="blueCount" min="1" max="13" value="5">
+    </div>
+    <div>
+      <label style="color: #ffcc00;">Yellow Balls:</label>
+      <input type="number" id="yellowCount" min="1" max="13" value="5">
+    </div>
+
+    <div class="betting">
+      <p>Choose Your Bet:</p>
+      <input type="number" id="betAmount" value="100" step="10">
+      <select id="betColor">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+      </select>
+    </div>
+
+    <button id="startGame">Start Game</button>
+    <button id="continueGame" style="display: none;">Continue</button>
+    <button id="cashOut" style="display: none;">Cash Out</button>
+
+    <audio id="winSound" src="coin-donation-2-180438.mp3" preload="auto"></audio>
+    <audio id="loseSound" src="mixkit-player-losing-or-failing-2042.wav" preload="auto"></audio>
+    
+    <div class="info">
+      <p>Current Multiplier: <span id="multiplier">1.00</span>x</p>
+      <p>Potential Earnings: $<span id="potentialEarnings">0.00</span></p>
+      <p id="message"></p>
+      <p id="ballColor" style="font-size: 14px;"></p> <!-- Added ball color display -->
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
